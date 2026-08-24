@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>ملخص اختبار الترقية — 304 سؤال (جامعة الملك سعود)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-950:#0a1f33;
+    --navy-900:#0d2b47;
+    --navy-800:#123a5e;
+    --navy-700:#184a75;
+    --teal-600:#0f5c66;
+    --gold-500:#c9a15a;
+    --gold-400:#dbb978;
+    --sand-50:#f6f4ee;
+    --sand-100:#efece2;
+    --ink-900:#0d1b2a;
+    --ink-600:#4a5a6a;
+    --white:#ffffff;
+    --green-600:#1f7a4d;
+    --red-600:#b0392f;
+    --radius-lg:20px;
+    --radius-md:14px;
+    --radius-sm:9px;
+    --shadow-1: 0 1px 2px rgba(10,31,51,.06), 0 8px 24px -12px rgba(10,31,51,.18);
+    --shadow-2: 0 4px 14px rgba(10,31,51,.10), 0 20px 48px -18px rgba(10,31,51,.28);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'IBM Plex Sans Arabic','Tajawal',sans-serif;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, rgba(24,74,117,.20), transparent 60%),
+      radial-gradient(1000px 500px at 110% 0%, rgba(201,161,90,.16), transparent 55%),
+      var(--sand-50);
+    color:var(--ink-900);
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:20px 18px 60px;}
+
+  header.hero{
+    background:linear-gradient(155deg,var(--navy-950) 0%, var(--navy-800) 55%, var(--teal-600) 130%);
+    border-radius:var(--radius-lg);
+    padding:30px 26px 26px;
+    color:var(--white);
+    position:relative;
+    overflow:hidden;
+    box-shadow:var(--shadow-2);
+  }
+  header.hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(115deg, rgba(255,255,255,.045) 0 2px, transparent 2px 34px);
+    pointer-events:none;
+  }
+  .hero-top{display:flex; align-items:flex-start; justify-content:space-between; gap:14px; position:relative; z-index:1;}
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand .mark{
+    width:46px;height:46px;border-radius:12px;
+    background:linear-gradient(145deg,var(--gold-400),var(--gold-500));
+    display:flex;align-items:center;justify-content:center;
+    font-weight:900;color:var(--navy-950);font-size:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+    flex:none;
+  }
+  .brand .txt .k1{font-size:12.5px;letter-spacing:.04em;color:var(--gold-400);font-weight:700;}
+  .brand .txt .k2{font-size:20px;font-weight:900;margin-top:1px;}
+  .eyebrow-pill{
+    font-size:12px; font-weight:700; color:var(--navy-950);
+    background:var(--gold-400); padding:6px 12px; border-radius:999px;
+    white-space:nowrap;
+  }
+  h1.title{
+    font-size:clamp(24px,4.2vw,34px);
+    margin:20px 0 6px; font-weight:900; line-height:1.25; position:relative; z-index:1;
+  }
+  p.subtitle{
+    margin:0; color:rgba(255,255,255,.82); font-size:15px; max-width:60ch; line-height:1.8; position:relative; z-index:1;
+  }
+  .hero-stats{
+    display:flex; gap:10px; margin-top:20px; flex-wrap:wrap; position:relative; z-index:1;
+  }
+  .hstat{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.14);
+    backdrop-filter:blur(6px);
+    border-radius:var(--radius-sm);
+    padding:10px 14px;
+    min-width:92px;
+  }
+  .hstat b{display:block;font-size:19px;font-weight:900;}
+  .hstat span{font-size:11.5px;color:rgba(255,255,255,.75);}
+
+  .modebar{
+    display:flex; gap:8px; margin:22px 0 16px; background:var(--white);
+    padding:6px; border-radius:999px; box-shadow:var(--shadow-1); border:1px solid #e7e2d4;
+  }
+  .modebar button{
+    flex:1; border:none; background:transparent; padding:12px 10px; border-radius:999px;
+    font-family:inherit; font-size:14.5px; font-weight:700; color:var(--ink-600);
+    cursor:pointer; transition:all .18s ease; display:flex; align-items:center; justify-content:center; gap:8px;
+  }
+  .modebar button.active{
+    background:linear-gradient(145deg,var(--navy-800),var(--navy-900)); color:#fff;
+    box-shadow:0 6px 16px -4px rgba(13,43,71,.5);
+  }
+  .modebar button:not(.active):hover{ background:var(--sand-100); }
+
+  .controls{
+    display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:18px;
+  }
+  select, .btn{
+    font-family:inherit; font-size:14px; font-weight:600;
+    border-radius:var(--radius-sm); border:1.5px solid #e2dcc8; background:var(--white);
+    padding:10px 14px; color:var(--ink-900); cursor:pointer;
+  }
+  select{ min-width:220px; appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23184a75' stroke-width='2.4'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:left 12px center; padding-left:32px;}
+  .btn{ display:inline-flex; align-items:center; gap:6px; }
+  .btn:hover{ border-color:var(--navy-700); color:var(--navy-800); }
+  .btn.primary{ background:var(--navy-800); border-color:var(--navy-800); color:#fff; }
+  .btn.primary:hover{ background:var(--navy-900); }
+  .progress-wrap{
+    flex:1 1 160px; min-width:140px; height:8px; background:#e7e2d4; border-radius:999px; overflow:hidden;
+  }
+  .progress-bar{ height:100%; background:linear-gradient(90deg,var(--gold-500),var(--gold-400)); border-radius:999px; transition:width .3s ease; }
+  .progress-label{font-size:12.5px; color:var(--ink-600); font-weight:700; white-space:nowrap;}
+
+  /* ===== Flashcard (question + options, flip to reveal correct) ===== */
+  .stage{ min-height:360px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .card-scene{ width:100%; max-width:720px; perspective:1600px; }
+  .card{
+    position:relative; width:100%; min-height:340px; border-radius:var(--radius-lg);
+    cursor:pointer; transform-style:preserve-3d; transition:transform .55s cubic-bezier(.2,.9,.25,1);
+  }
+  .card.flipped{ transform:rotateY(180deg); }
+  .face{
+    position:absolute; inset:0; backface-visibility:hidden; border-radius:var(--radius-lg);
+    display:flex; flex-direction:column; padding:30px 28px; box-shadow:var(--shadow-2); overflow:auto;
+  }
+  .face.front{
+    background:linear-gradient(160deg,var(--white),var(--sand-100));
+    border:1px solid #e7e2d4;
+  }
+  .face.back{
+    background:linear-gradient(160deg,var(--navy-900),var(--navy-800) 60%, var(--teal-600) 130%);
+    color:#fff; transform:rotateY(180deg);
+  }
+  .chip{
+    align-self:flex-start; font-size:12px; font-weight:700; padding:5px 12px; border-radius:999px;
+    background:var(--navy-800); color:#fff; margin-bottom:14px;
+  }
+  .face.back .chip{ background:rgba(255,255,255,.16); color:var(--gold-400); }
+  .face-label{ font-size:11.5px; letter-spacing:.06em; font-weight:700; color:var(--ink-600); margin-bottom:6px;}
+  .face.back .face-label{ color:rgba(255,255,255,.6); }
+  .face-q{ font-size:clamp(16px,2.1vw,19px); font-weight:800; line-height:1.7; margin-bottom:14px; }
+  .mini-opts{ display:flex; flex-direction:column; gap:8px; flex:1; }
+  .mini-opt{
+    font-size:13.5px; padding:9px 12px; border-radius:10px; background:rgba(15,43,71,.05);
+    border:1px solid rgba(15,43,71,.10); line-height:1.6; display:flex; gap:8px;
+  }
+  .face.front .mini-opt .ol{ font-weight:800; color:var(--navy-800); }
+  .face.back .mini-opt{ background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.16); color:rgba(255,255,255,.85);}
+  .face.back .mini-opt.correct{ background:rgba(46,204,113,.22); border-color:#2ecc71; color:#fff; font-weight:700;}
+  .face.back .mini-opt .ol{ font-weight:800; color:var(--gold-400); }
+  .face-hint{ font-size:12px; color:var(--ink-600); margin-top:12px; display:flex; align-items:center; gap:6px; }
+  .face.back .face-hint{ color:rgba(255,255,255,.6); }
+
+  .card-nav{ display:flex; align-items:center; justify-content:center; gap:14px; margin-top:24px; }
+  .navbtn{
+    width:48px;height:48px;border-radius:50%; border:1.5px solid #e2dcc8; background:#fff;
+    display:flex;align-items:center;justify-content:center; cursor:pointer; box-shadow:var(--shadow-1);
+    transition:transform .15s ease, border-color .15s ease;
+  }
+  .navbtn:hover{ transform:translateY(-2px); border-color:var(--navy-700); }
+  .navbtn svg{ width:20px;height:20px; stroke:var(--navy-800); }
+  .counter-pill{
+    font-weight:800; font-size:14px; background:#fff; border:1.5px solid #e2dcc8; border-radius:999px;
+    padding:11px 20px; min-width:90px; text-align:center;
+  }
+  .know-row{ display:flex; gap:10px; margin-top:16px; }
+  .know-btn{
+    flex:1; max-width:220px; padding:12px 16px; border-radius:var(--radius-sm); border:1.5px solid #e2dcc8;
+    background:#fff; font-family:inherit; font-weight:700; font-size:14px; cursor:pointer;
+    display:flex; align-items:center; justify-content:center; gap:8px; transition:all .15s ease;
+  }
+  .know-btn.good:hover{ background:#e9f6ee; border-color:var(--green-600); color:var(--green-600); }
+  .know-btn.bad:hover{ background:#fbeceb; border-color:var(--red-600); color:var(--red-600); }
+
+  /* ===== Quiz ===== */
+  .quiz-card{
+    background:var(--white); border:1px solid #e7e2d4; border-radius:var(--radius-lg);
+    padding:30px 28px; box-shadow:var(--shadow-2); max-width:760px; margin:0 auto;
+  }
+  .quiz-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; gap:10px; flex-wrap:wrap;}
+  .score-pill{
+    font-weight:800; font-size:13.5px; background:var(--sand-100); border:1px solid #e2dcc8;
+    border-radius:999px; padding:8px 14px; color:var(--navy-900);
+  }
+  .quiz-q{ font-size:clamp(18px,2.4vw,22px); font-weight:800; line-height:1.7; margin-bottom:22px; color:var(--navy-950);}
+  .options{ display:flex; flex-direction:column; gap:11px; }
+  .option{
+    text-align:right; padding:15px 18px; border-radius:var(--radius-md); border:1.6px solid #e2dcc8;
+    background:#fff; font-family:inherit; font-size:15px; font-weight:600; cursor:pointer; line-height:1.6;
+    display:flex; align-items:center; gap:12px; transition:all .15s ease;
+  }
+  .option .oletter{
+    flex:none; width:28px;height:28px;border-radius:50%; background:var(--sand-100); color:var(--navy-800);
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;
+  }
+  .option:hover:not(.locked){ border-color:var(--navy-700); background:var(--sand-100); }
+  .option.correct{ border-color:var(--green-600); background:#e9f6ee; color:#0d3d24; }
+  .option.correct .oletter{ background:var(--green-600); color:#fff; }
+  .option.wrong{ border-color:var(--red-600); background:#fbeceb; color:#5c1610; }
+  .option.wrong .oletter{ background:var(--red-600); color:#fff; }
+  .option.locked{ cursor:default; }
+  .quiz-feedback{
+    margin-top:18px; padding:14px 16px; border-radius:var(--radius-sm); font-size:14px; line-height:1.7;
+    background:var(--sand-100); border:1px solid #e2dcc8; display:none;
+  }
+  .quiz-feedback.show{ display:block; }
+  .quiz-actions{ margin-top:20px; display:flex; justify-content:flex-end; gap:10px;}
+
+  .end-screen{ text-align:center; padding:50px 20px; color:var(--ink-600); }
+  .end-screen .big-score{ font-size:52px; font-weight:900; color:var(--navy-900); margin:10px 0;}
+  .end-screen .big-score span{ font-size:22px; color:var(--ink-600); font-weight:700; }
+
+  footer{ text-align:center; margin-top:36px; color:var(--ink-600); font-size:12.5px; line-height:1.9;}
+  footer b{ color:var(--navy-800); }
+
+  .pageswitch{
+    display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap;
+  }
+  .pageswitch a{
+    flex:1; min-width:180px; text-decoration:none; font-family:inherit; font-size:13px; font-weight:700;
+    padding:11px 14px; border-radius:var(--radius-sm); border:1.5px solid #e2dcc8; background:var(--white);
+    color:var(--ink-600); display:flex; align-items:center; justify-content:center; gap:8px;
+    transition:all .15s ease;
+  }
+  .pageswitch a.current{
+    background:linear-gradient(145deg,var(--navy-800),var(--navy-900)); color:#fff; border-color:var(--navy-900);
+  }
+  .pageswitch a:not(.current):hover{ border-color:var(--navy-700); color:var(--navy-800); background:var(--sand-100); }
+
+  @media (max-width:640px){
+    .wrap{padding:14px 12px 40px;}
+    header.hero{padding:22px 18px 20px;}
+    .modebar button span.lbl{ display:none; }
+    select{min-width:0; flex:1;}
+    .card{min-height:400px;}
+    .face{padding:22px 18px;}
+    .know-row{flex-direction:column;}
+    .know-btn{max-width:none;}
+  }
+  button:focus-visible, select:focus-visible, .option:focus-visible, .navbtn:focus-visible{
+    outline:3px solid var(--gold-500); outline-offset:2px;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .card{ transition:none; }
+    .navbtn{ transition:none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="pageswitch">
+    <a href="index.html">📇 البطاقات الشاملة (467 سؤال)</a>
+    <a href="KSU101_exam_304.html" class="current">📝 أسئلة اختبار الترقية (304 سؤال)</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-top">
+      <div class="brand">
+        <div class="mark">ك</div>
+        <div class="txt">
+          <div class="k1">جامعة الملك سعود · اختبار الترقية</div>
+          <div class="k2">ملخص اختبار الترقية — 304 سؤال</div>
+        </div>
+      </div>
+      <span class="eyebrow-pill" id="qCountPill">— سؤال</span>
+    </div>
+    <h1 class="title">أسئلة اختبار الترقية من المرتبة الأولى حتى العاشرة</h1>
+    <p class="subtitle">304 سؤال اختيار من متعدد (8 أبواب × 38 سؤالاً) بصياغة جاهزة مع 4 خيارات والإجابة الصحيحة لكل سؤال، مرتبة حسب أبواب مذكرة KSU 101.</p>
+    <div class="hero-stats">
+      <div class="hstat"><b id="statTotal">0</b><span>سؤال</span></div>
+      <div class="hstat"><b>8</b><span>أبواب</span></div>
+      <div class="hstat"><b id="statKnown">0</b><span>أتقنتها</span></div>
+      <div class="hstat"><b id="statScore">0%</b><span>نتيجة الاختبار</span></div>
+    </div>
+  </header>
+
+  <div class="modebar">
+    <button id="modeFlash" class="active" onclick="setMode('flash')">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="14" height="10" rx="2"/><path d="M7 19h14M17 15v4"/></svg>
+      <span class="lbl">البطاقات التعليمية</span>
+    </button>
+    <button id="modeQuiz" onclick="setMode('quiz')">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.8-2.2 2-2.5 3.5M12 17h.01"/></svg>
+      <span class="lbl">اختبار تفاعلي</span>
+    </button>
+  </div>
+
+  <div class="controls">
+    <select id="chapterSelect" onchange="onChapterChange()"></select>
+    <button class="btn" id="shuffleBtn" onclick="shuffleCurrent()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+      خلط
+    </button>
+    <div class="progress-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
+    <span class="progress-label" id="progressLabel">0 / 0</span>
+  </div>
+
+  <!-- Flashcard stage -->
+  <div class="stage" id="flashStage">
+    <div class="card-scene">
+      <div class="card" id="card" onclick="flipCard()">
+        <div class="face front">
+          <span class="chip" id="chapChipFront">الباب</span>
+          <span class="face-label">سؤال</span>
+          <div class="face-q" id="qFront">...</div>
+          <div class="mini-opts" id="optsFront"></div>
+          <div class="face-hint">👆 اضغط للكشف عن الإجابة الصحيحة</div>
+        </div>
+        <div class="face back">
+          <span class="chip" id="chapChipBack">الباب</span>
+          <span class="face-label">الخيارات — والإجابة الصحيحة مميزة</span>
+          <div class="face-q" id="qBack">...</div>
+          <div class="mini-opts" id="optsBack"></div>
+          <div class="face-hint">👆 اضغط للعودة إلى السؤال</div>
+        </div>
+      </div>
+    </div>
+    <div class="know-row">
+      <button class="know-btn bad" onclick="markCard(false)">🔁 أحتاج مراجعة</button>
+      <button class="know-btn good" onclick="markCard(true)">✅ أتقنتها</button>
+    </div>
+    <div class="card-nav">
+      <button class="navbtn" onclick="prevCard()" aria-label="السابق"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <span class="counter-pill" id="cardCounter">1 / 1</span>
+      <button class="navbtn" onclick="nextCard()" aria-label="التالي"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+
+  <!-- Quiz stage -->
+  <div class="stage" id="quizStage" style="display:none;">
+    <div class="quiz-card" id="quizCard">
+      <div class="quiz-top">
+        <span class="chip" id="quizChapChip" style="margin:0;">الباب</span>
+        <span class="score-pill" id="scorePill">النتيجة: 0 / 0</span>
+      </div>
+      <div class="quiz-q" id="quizQ">...</div>
+      <div class="options" id="quizOptions"></div>
+      <div class="quiz-feedback" id="quizFeedback"></div>
+      <div class="quiz-actions">
+        <button class="btn primary" id="nextQBtn" onclick="nextQuizQuestion()" style="display:none;">السؤال التالي ←</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <b>ملخص اختبار الترقية — KSU 101</b> — 304 سؤال اختيار من متعدد بصياغة جاهزة للمراجعة والاختبار الذاتي.<br>
+    استخدم فلتر الأبواب لمراجعة باب محدد، أو اختر «كل الأبواب» لمراجعة شاملة.
+  </footer>
+</div>
+
+<script>
+const QUESTIONS = [{"ch":1,"q":"ما الصفة القانونية التي تتمتع بها جامعة الملك سعود وفق النظام األساس؟","o":["مؤسسة أكاديمية مستقلة غير هادفة للربح","مؤسسة ربحية","جهة حكومية تجارية","هيئة استشارية"],"ci":0},{"ch":1,"q":"إلى من تعود ملكية الجامعة بحسب النظام؟","o":["الهيئة الملكية لمدينة الرياض","وزارة التعليم","مجلس الوزراء","جهة خاصة"],"ci":0},{"ch":1,"q":"ما اإلطار الذي يمنح الجامعة استقلالها المالي واإلداري؟","o":["النظام األساس للجامعة","نظام الخدمة المدنية","نظام التعليم العام","نظام المحاسبة الحكومية"],"ci":0},{"ch":1,"q":"من الجهة التي تشرف على اعتماد رؤى الجامعة وخططها؟","o":["مجلس إدارة الهيئة","وزارة الداخلية","ديوان المحاسبة","مجلس الوزراء"],"ci":0},{"ch":1,"q":"ما أحد صلاحيات مجلس إدارة الجامعة؟","o":["اعتماد السياسات والاستراتيجيات","إدارة السكن الجامعي فقط","اإلشراف على األندية الطالبية","وضع المناهج المدرسية"],"ci":0},{"ch":1,"q":"ما الجهة المخولة بتعيين رئيس الجامعة؟","o":["مجلس إدارة الهيئة","عمادة شؤون الطالب","الوزارة مباشرة","مجلس الجامعة فقط"],"ci":0},{"ch":1,"q":"ما أبرز ما ورد حول أعضاء هيئة التدريس في المادة الرابعة؟","o":["تمتعهم بالحريات األكاديمية","عدم السماح بالنشر الخارجي","عدم إمكانية الانتداب","منع حضور المؤتمرات"],"ci":0},{"ch":1,"q":"ما دور المجلس في الشؤون المالية؟","o":["اعتماد الميزانية والحساب الختامي","جمع الرسوم الدراسية فقط","إدارة السكن الجامعي","اإلشراف على المقاصف"],"ci":0},{"ch":1,"q":"ما المقصود بالذمة المالية المستقلة للجامعة؟","o":["قدرة الجامعة على إدارة أموالها ذاتيا","ارتباطها الكامل بوزارة المالية","عدم امتلاكها أي موارد","أنها مؤسسة خيرية"],"ci":0},{"ch":1,"q":"من صلاحيات الجامعة الاستثمارية؟","o":["تملك األصول والترخيص بها","الاستثمار في التعليم العام فقط","الاستثمار في األنشطة التجارية الخارجية فقط","منع الاستثمار تماما"],"ci":0},{"ch":1,"q":"من يضع اللوائح الداخلية للجامعة؟","o":["مجلس إدارة الجامعة","وزارة الإعلام","مجلس الضمان الصحي","وزارة التجارة"],"ci":0},{"ch":1,"q":"ما شرط اعتماد تعيين مناصب قيادية مثل عمداء الكليات؟","o":["الرفع لرئيس مجلس الوزراء","موافقة الطالب","موافقة مجلس المدينة","موافقة البلديات"],"ci":0},{"ch":1,"q":"ماذا يخضع منسوبو الجامعة من أنظمة؟","o":["نظام العمل والتأمينات","نظام الخدمة العسكرية","أنظمة الشركات","نظام الجمعيات"],"ci":0},{"ch":1,"q":"ما الغرض من المادة الثالثة عشرة؟","o":["السماح بفرض رسوم وبرامج تدريبية","منع جميع الرسوم","إلزام الطالب بخدمات مدفوعة","إلغاء المقابل المالي"],"ci":0},{"ch":1,"q":"ماذا تشمل صلاحيات المجلس في إدارة المخاطر؟","o":["وضع إجراءات ونظم كاملة إلدارة المخاطر","مراقبة الطالب فقط","تقييم األنشطة الترفيهية","الشؤون الرياضية"],"ci":0},{"ch":1,"q":"ما الجهة المخولة باعتماد األوقاف؟","o":["مجلس إدارة الهيئة","الطالب","نادي أعضاء هيئة التدريس","لجنة الخدمات"],"ci":0},{"ch":1,"q":"ما أحد موارد الجامعة المالية؟","o":["عوائد استثماراتها","الضرائب","مخالفات المرور","رسوم الجوازات"],"ci":0},{"ch":1,"q":"من يعين مراجع الحسابات؟","o":["مجلس إدارة الهيئة","وزارة المالية","إدارة الجامعة مباشرة","المحكمة التجارية"],"ci":0},{"ch":1,"q":"ما الذي تنظمه المادة العشرون؟","o":["السجالت والعقود واللوائح","توزيع المكاتب اإلدارية","جداول المحاضرات","العيادات الطبية"],"ci":0},{"ch":1,"q":"ما شرط حل الجامعة أو دمجها؟","o":["صدور أمر ملكي","قرار الطالب","استفتاء عام","إعلان إعلامي"],"ci":0},{"ch":1,"q":"ما هدف المادة السادسة؟","o":["تنظيم تشكيل مجلس اإلدارة","وضع الجدول الدراسي","تحديد األنشطة الطالبية","تنظيم المقاصف"],"ci":0},{"ch":1,"q":"ما صلاحية المجلس فيما يتعلق بالرسوم الدراسية؟","o":["تحديد الرسوم والمقابل المالي","إعفاء جميع الطالب","حظر الرسوم","نقل الرسوم لجهة خارجية"],"ci":0},{"ch":1,"q":"أين تعقد اجتماعات المجلس عادة؟","o":["في مقر الجامعة","في الفنادق","في المدارس","بلا مكان محدد"],"ci":0},{"ch":1,"q":"ما هو دور أمين المجلس؟","o":["إعداد الجداول والمحاضر","مراقبة الطالب","اإلشراف على األمن","تنظيم النقل"],"ci":0},{"ch":1,"q":"من الجهة المخولة بتعديل اللوائح؟","o":["المجلس","الطالب","عمادة القبول","النادي الرياضي"],"ci":0},{"ch":1,"q":"ما علاقة الجامعة بالهيئة الملكية؟","o":["الهيئة هي المالك والمشرف العام","ال علاقة","علاقة خدمية فقط","تشرف على األنشطة الرياضية"],"ci":0},{"ch":1,"q":"ماذا تنص المواد المتعلقة باألبحاث؟","o":["دعم الحرية األكاديمية","منع النشر الدولي","منع تمويل البحوث","إلغاء التعاون الدولي"],"ci":0},{"ch":1,"q":"أحد اختصاصات المجلس في التعليم؟","o":["تطوير واعتماد البرامج الدراسية","إنشاء مناهج المدارس","برامج التعليم العام","اعتماد األنشطة الطالبية فقط"],"ci":0},{"ch":1,"q":"من جهة اإلقرار النهائي للسياسات الكبرى؟","o":["مجلس إدارة الهيئة","الطالب","مجلس الشورى","مجلس المعلمين"],"ci":0},{"ch":1,"q":"ما دور المجلس في شؤون األصول؟","o":["الموافقة على التملك والاستثمار","المنع التام","اإلشراف على األندية","مراقبة المرور"],"ci":0},{"ch":1,"q":"ما الغرض من السجالت المحاسبية؟","o":["ضمان الشفافية","زيادة عدد الطالب","تنظيم األنشطة الرياضية","مراقبة األمن"],"ci":0},{"ch":1,"q":"المقصود بالاستقلال األكاديمي؟","o":["حرية الجامعة في إدارة برامجها","الاعتماد على وزارة التعليم","تقليل البرامج","توحيد المناهج مع المدارس"],"ci":0},{"ch":1,"q":"الجامعة تمنح درجات…","o":["التعليم العالي بجميع مستوياته","الثانوية العامة","الدورات المدرسية","الدبلومات العسكرية"],"ci":0},{"ch":1,"q":"من يتولى مخاطبة رئيس مجلس الوزراء؟","o":["الجامعة عبر المجلس","الطالب","النادي الثقافي","لجنة السكن"],"ci":0},{"ch":1,"q":"ما معيار تأسيس الشركات التابعة؟","o":["عدم مخالفة اإلجراءات واألنظمة","رغبة الطالب","اختيار عشوائي","تخصيص إلزامي"],"ci":0},{"ch":1,"q":"من مسؤول عن التواصل الإعلامي؟","o":["المجلس","مجلس الطالب","النادي التطوعي","وزارة الصحة"],"ci":0},{"ch":1,"q":"ما نوع التعليم الذي تقدمه الجامعة؟","o":["حضوري – مدمج – عن بعد","تعليم مدرسي فقط","تدريب رياضي","برامج اجتماعية فقط"],"ci":0},{"ch":1,"q":"كيف تعتمد مكافآت كبار التنفيذيين؟","o":["بقرار من المجلس","بقرار الطالب","بقرار النادي","بقرار مستقل من العمادة"],"ci":0},{"ch":2,"q":"في أي عام صدر المرسوم الملكي بتأسيس جامعة الملك سعود؟","o":["1377 هـ","1380 هـ","1392 هـ","1402 هـ"],"ci":0},{"ch":2,"q":"من أول مدير تم تعيينه لجامعة الملك سعود عند تأسيسها؟","o":["د.عبدالوهاب عزام","د.عبدالعزيز الخويطر","د.منصور اليحيى","أ.ناصر المنقور"],"ci":0},{"ch":2,"q":"ما أول كلية بدأت فيها الدراسة الفعلية بعد التأسيس؟","o":["كلية اآلداب","كلية العلوم","كلية الصيدلة","كلية التربية"],"ci":0},{"ch":2,"q":"في أي سنة بدأت الدراسة في كلية العلوم؟","o":["1379 هـ","1385 هـ","1381 هـ","1394 هـ"],"ci":0},{"ch":2,"q":"تغير ألول مرة؟ ما اسم الجامعة القديم عندما ّ","o":["جامعة الرياض","جامعة العاصمة","جامعة الملك خالد","جامعة العلوم"],"ci":0},{"ch":2,"q":"من الذي أصدر قرار إعادة اسم الجامعة إلى “جامعة الملك سعود” عام 1402 هـ؟","o":["الملك خالد","الملك فيصل","الملك سعود","الملك فهد"],"ci":0},{"ch":2,"q":"من توّلى إدارة الجامعة بعد وفاة د.عبدالوهاب عزام؟ الفدا","o":["ناصر المنقور","د.الخويطر","د.عبدالعزيز ّ","د.أحمد الضبيب"],"ci":0},{"ch":2,"q":"كم عدد الكليات التي بدأت بها الجامعة عند تأسيسها؟","o":["كليتان","أربع كليات","خمس كليات","كلية واحدة"],"ci":0},{"ch":2,"q":"أي من الكليات التالية كانت ضمن المرحلة المبكرة للتوسع األكاديمي؟","o":["كلية التجارة (إدارة الأعمال حاليا)","كلية الهندسة","كلية المجتمع","كلية التمريض"],"ci":0},{"ch":2,"q":"في أي عام تم فتح القبول للطالبات ألول مرة؟","o":["1381 هـ","1379 هـ","1400 هـ","1414 هـ"],"ci":0},{"ch":2,"q":"أول قسم استقبل الطالبات في الجامعة كان:","o":["اللغة اإلنجليزية","الرياضيات","الإعلام","الجغرافيا"],"ci":0},{"ch":2,"q":"ما الكلية التي أُنشئت لتلبية احتياجات المملكة الزراعية عام 1385 هـ؟","o":["كلية الزراعة","كلية الاقتصاد","كلية التمريض","كلية السياحة"],"ci":0},{"ch":2,"q":"في أي سنة ُض ّمت كليتا الهندسة والتربية للجامعة؟","o":["1387 هـ","1381 هـ","1400 هـ","1410 هـ"],"ci":0},{"ch":2,"q":"متى بدأت الدراسة الفعلية في كلية الطب؟","o":["1389 هـ","1377 هـ","1381 هـ","1399 هـ"],"ci":0},{"ch":2,"q":"متى بدأ قبول الطالبات في كلية الطب؟","o":["1394 هـ","1389 هـ","1402 هـ","1410 هـ"],"ci":0},{"ch":2,"q":"ما المعهد الذي أنشئ عام 1394 هـ لنشر العربية لغير الناطقين بها؟","o":["معهد اللغويات العربية","مركز الترجمة","معهد الدراسات الدولية","مركز الخدمة المجتمعية"],"ci":0},{"ch":2,"q":"أي كلية تعد أول كلية للعلوم الطبية التطبيقية في المملكة؟","o":["كلية العلوم الطبية التطبيقية بجامعة الملك سعود","كلية الطب بجامعة جدة","كلية التمريض","كلية المجتمع"],"ci":0},{"ch":2,"q":"في أي عام أُنشئت كلية طب األسنان؟","o":["1395 هـ","1387 هـ","1402 هـ","1418 هـ"],"ci":0},{"ch":2,"q":"أول فرع خارجي للجامعة كان في:","o":["أبها","القصيم","جازان","الجوف"],"ci":0},{"ch":2,"q":"متى أُنشئ فرع الجامعة في القصيم؟","o":["1401 هـ","1387 هـ","1415 هـ","1421 هـ"],"ci":0},{"ch":2,"q":"أي فروع أصبحت الحقا جامعات مستقلة؟","o":["أبها – القصيم – جازان","الدمام – جدة","نجران – تبوك فقط","ال شيء"],"ci":0},{"ch":2,"q":"ما السنة التي صدر فيها المرسوم الملكي رقم 112 الخاص بالنظام المبكر للجامعة؟","o":["1380 هـ","1377 هـ","1394 هـ","1402 هـ"],"ci":0},{"ch":2,"q":"ما النظام الذي صدر عام 1387 هـ وأعاد تنظيم الجامعة؟","o":["المرسوم م 11/","النظام األساسي","الئحة التعليم العالي","نظام الجامعات األهلية"],"ci":0},{"ch":2,"q":"في أي عام تم افتتاح المستشفى الجامعي (مستشفى الملك خالد)؟","o":["1402 هـ","1389 هـ","1395 هـ","1410 هـ"],"ci":0},{"ch":2,"q":"كم تبلغ مساحة المدينة الجامعية بالدرعية؟","o":["9 ملايين متر مربع","1 مليون متر","500 ألف متر","2 مليون متر"],"ci":0},{"ch":2,"q":"من الذي قام بافتتاح المدينة الجامعية بالدرعية؟","o":["الملك فهد","الملك سعود","الملك فيصل","الملك خالد"],"ci":0},{"ch":2,"q":"في أي عام تم افتتاح المدينة الجامعية للطالبات؟","o":["1435–1434 هـ","1425 هـ","1401 هـ","1410 هـ"],"ci":0},{"ch":2,"q":"أي مشروع يمثل دعما ماليًا ذاتيا للجامعة؟","o":["برنامج األوقاف","المقصف الجامعي","رسوم النشاط","الاشتراكات الطالبية"],"ci":0},{"ch":2,"q":"إحدى مراحل التوسع التاريخية تضمنت إنشاء كليتي:","o":["الهندسة والتربية","المجتمع والتقنية","القانون والفنون","الإعلام والسياحة"],"ci":0},{"ch":2,"q":"ما المؤسسة البحثية التي أنشئت عام 1417 هـ؟","o":["معهد الملك عبدهللا للبحوث والدراسات","مركز اللغات","مركز المعلومات","مركز التربية"],"ci":0},{"ch":2,"q":"في أي عام صدر النظام الذي أعطى الجامعة استقلالًا أكبر عام 1444 هـ؟","o":["2023 م","2019 م","2010 م","1990 م"],"ci":0},{"ch":2,"q":"من الذي يرأس مجلس إدارة الجامعة حاليًا حسب المذكرة؟","o":["يوسف البنيان","رئيس الوزراء","وزير التعليم","مدير الجامعة"],"ci":0},{"ch":2,"q":"كم عدد الكليات التي تضمها الجامعة حاليًا حسب المذكرة؟","o":["24 كلية","10 كليات","15 كلية","30 كلية"],"ci":0},{"ch":2,"q":"أي مما يلي حدث في عام 1400 هـ؟","o":["إنشاء كلية الطب بأبها","إنشاء كلية الصيدلة","افتتاح كلية اللغات","تأسيس كلية السياحة"],"ci":0},{"ch":2,"q":"أي كلية بدأت الدراسة فيها عام 1385 هـ؟","o":["كلية الزراعة","كلية الحقوق","كلية الفنون","كلية الإعلام"],"ci":0},{"ch":2,"q":"متى أصبح فرع القصيم جامعة مستقلة؟","o":["1425 هـ","1401 هـ","1387 هـ","1430 هـ"],"ci":0},{"ch":2,"q":"متى بدأ إنشاء كلية الدراسات التطبيقية وخدمة المجتمع؟","o":["1402 هـ","1377 هـ","1385 هـ","1440 هـ"],"ci":0},{"ch":2,"q":"أي مما يلي ُيعد من أبرز ملامح تاريخ الجامعة؟","o":["كونها أول جامعة حكومية في المملكة","أنها جامعة خاصة","أنها أنشئت خارج السعودية","أنها بدأت بمدرسة واحدة"],"ci":0},{"ch":3,"q":"في أي تصنيف عالمي احتلت جامعة الملك سعود المرتبة 116 لعام 2025؟","o":["QS","التايمز","شنغهاي","ويبوميتركس"],"ci":2},{"ch":3,"q":"ما التصنيف الذي يعتمد على 6 معايير تشمل جودة التعليم،واألبحاث،وأعضاء هيئة التدريس؟","o":["شنغهاي","QS","التايمز","ARU"],"ci":0},{"ch":3,"q":"ما وزن مؤشر “السمعة األكاديمية” في تصنيف QS العالمي؟","o":["%30","%10","%20","%50"],"ci":0},{"ch":3,"q":"في تصنيف QS لعام، 2026 جاءت جامعة الملك سعود في المرتبة:","o":["143 عالميًا","200 عالميًا","90 عالميًا","301 عالميًا"],"ci":0},{"ch":3,"q":"كم عدد الجامعات السعودية التي دخلت تصنيف شنغهاي لعام 2025؟","o":["13 جامعة","4 جامعات","20 جامعة","10 جامعات"],"ci":0},{"ch":3,"q":"أي من التالي ُيعد معيا ار في تصنيف شنغهاي؟","o":["عدد خريجي نوبل","جودة السكن الجامعي","عدد األنشطة الطالبية","الخدمات الطبية"],"ci":0},{"ch":3,"q":"ضمن تصنيف التايمز لعام 2026 جاءت الجامعة في الفئة:","o":["300–251","150–101","600–500","100–50"],"ci":0},{"ch":3,"q":"أي المؤشرات يرتبط بقياس “تأثير البحث العلمي” في تصنيف التايمز؟","o":["الاستشهادات","عدد الطالب","األنشطة اللوجستية","دخل السكن"],"ci":0},{"ch":3,"q":"أي تصنيف يعتمد على 18 معيا ار فرعيا بعد التحديث األخير) (WUR3.0؟","o":["التايمز","QS","ARU","شنغهاي"],"ci":0},{"ch":3,"q":"ما المؤشر الذي ارتفعت فيه الجامعة بشكل ملحوظ في QS بسبب النشر العلمي؟","o":["الاستشهادات لكل عضو هيئة تدريس","عدد المدرجات","نسبة اإلناث","جودة السكن"],"ci":0},{"ch":3,"q":"في تصنيف، QS 2026 تقدمت الجامعة 60 مرتبة خلال عامين،ما الترتيب السابق؟","o":["203","300","180","100"],"ci":0},{"ch":3,"q":"أي التخصصات جاءت ضمن أفضل 50 عالميًا حسب QS؟","o":["هندسة البترول – طب األسنان – الصيدلة","الجغرافيا – التاريخ – الفنون","القانون – التربية – الفلسفة","المحاسبة – الإعلام – الاقتصاد"],"ci":0},{"ch":3,"q":"في تصنيف التايمز جاءت الجامعة في المرتبة 20 عالميًا في أي مجال؟","o":["العلوم البينية","العلوم الطبية","العلوم الزراعية","اإلدارة"],"ci":0},{"ch":3,"q":"أي تخصص حصل على المرتبة 11 عالميًا حسب شنغهاي 2025؟","o":["الهندسة","الطب","التربية","الاقتصاد"],"ci":0},{"ch":3,"q":"في تصنيفات شنغهاي التخصصية،ما ترتيب “الصيدلة والعلوم الصيدالنية”؟","o":["21 عالميًا","40 عالميًا","100 عالميًا","15 عالميًا"],"ci":0},{"ch":3,"q":"أي تصنيف يعتمد على “شبكة البحث الدولية” كأحد مؤشرات القياس؟","o":["QS","شنغهاي","ARU","Webometrics"],"ci":0},{"ch":3,"q":"أي تصنيف يعتمد على الحضور الرقمي للمؤسسات؟","o":["Webometrics","QS","شنغهاي","ARU"],"ci":0},{"ch":3,"q":"ما المؤشر الذي تعتمد عليه ( ARU اتحاد الجامعات العربية) بشدة؟","o":["السمعة األكاديمية","حجم البحث","جودة التعليم العربية","عدد الطالب"],"ci":2},{"ch":3,"q":"ما المرتبة التي حققتها الجامعة عربيا في ARU عام 2026؟","o":["األولى عربيا","الثانية","الثالثة","الرابعة"],"ci":0},{"ch":3,"q":"ما العامل األكثر تأثي ار في صعود الجامعة في تصنيف QS؟","o":["المخرجات البحثية العالية","األنشطة الطالبية","الخدمات الطبية","السكن الجامعي"],"ci":0},{"ch":3,"q":"ما المؤشر ذو أعلى وزن في تصنيف التايمز؟","o":["الاستشهادات (%)30","التعليم (%)10","النظرة الدولية (%)5","الصناعة (%)4"],"ci":0},{"ch":3,"q":"أي من التصنيفات يهتم بـ “براءات الاختراع”؟","o":["التايمز – ضمن محور الصناعة","QS","ARU","Webometrics"],"ci":0},{"ch":3,"q":"دخلت جامعة الملك سعود أي الفئات في تصنيف التايمز عام 2024؟","o":["500–401","300–200","110–90","+700"],"ci":0},{"ch":3,"q":"أي تصنيف يركز على “جودة أعضاء هيئة التدريس”؟","o":["شنغهاي","QS","Webometrics","ARU"],"ci":0},{"ch":3,"q":"كم وزنه مؤشر “سمعة التوظيف” في QS؟","o":["%15","%5","%30","%50"],"ci":0},{"ch":3,"q":"ما العنصر المشترك في جميع التصنيفات العالمية الثالثة – (QS التايمز – شنغهاي)؟","o":["البحث العلمي","السكن","الفعاليات","الخدمات اللوجستية"],"ci":0},{"ch":3,"q":"أي تخصص جاء ضمن أفضل 37 عالميًا حسب شنغهاي؟","o":["العلوم الزراعية","الطب","الجغرافيا","الحاسب"],"ci":0},{"ch":3,"q":"ما الفئة التي ظهرت فيها الجامعة في تصنيف التايمز قبل التقدم؟","o":["600–501","300–200","100–50","+600"],"ci":0},{"ch":3,"q":"أي من التالي معيار في QS ولا يوجد في شنغهاي؟","o":["نسبة الطالب الدوليين","عدد الحاصلين على نوبل","أبحاث Nature/Science","جودة التعليم"],"ci":0},{"ch":3,"q":"ما الذي يميز تصنيف Webometrics؟","o":["قياس الحضور الرقمي","قياس الجوائز البحثية","قياس عدد المكتبات","قياس جودة القاعات"],"ci":0},{"ch":3,"q":"أي تخصص ظهر ضمن أفضل 33 عالميًا حسب QS؟","o":["هندسة البترول","الهندسة المدنية","علوم األرض","القانون"],"ci":0},{"ch":3,"q":"أي مما يلي سبب رئيسي في تقدم الجامعة عالميًا؟","o":["زيادة النشر العلمي بنسبة كبيرة","زيادة الفعاليات الاجتماعية","تخفيض الرسوم","زيادة عدد األندية"],"ci":0},{"ch":3,"q":"في تصنيف شنغهاي،ما وزن “Nature و” Science؟","o":["%20","%10","%5","%30"],"ci":0},{"ch":3,"q":"ما أحد مؤشرات \"النظرة الدولية\" في التايمز؟","o":["نسبة الطالب الدوليين","عدد األندية","عدد الفعاليات","جودة النقل"],"ci":0},{"ch":3,"q":"في، QS ما المؤشر الذي يقيس تعاون الجامعة البحثي مع العالم؟","o":["شبكة البحث الدولية","السمعة المؤسسية","دخل الصناعة","جودة السكن"],"ci":0},{"ch":3,"q":"أي تصنيف يضم فئة “التأثير” المتعلقة بأهداف التنمية المستدامة؟","o":["التايمز","QS","شنغهاي","ARU"],"ci":0},{"ch":3,"q":"حسب المذكرة،ما النسبة التي تساهم بها الجامعة من إجمالي األبحاث السعودية؟","o":["%23","%5","%50","%10"],"ci":0},{"ch":3,"q":"أي من التالي يعكس تقدم الجامعة في التصنيفات؟","o":["نمو مستمر في النشر والسمعة","تخفيض عدد البرامج","إيقاف البحوث","تقليل أعضاء هيئة التدريس"],"ci":0},{"ch":4,"q":"أي أداة ابتكرتها الجامعة لقياس انحراف اإلطباق؟","o":["جهاز األشعة المتحركة","أداة قياس انحراف اإلطباق","جهاز تحليل اللدغة","عدسة قياس الفك"],"ci":1},{"ch":4,"q":"أين تم تسجيل ابتكار أداة قياس انحراف اإلطباق؟","o":["مكتب براءات الاختراع األمريكي","مكتب براءات الخليج","الهيئة السعودية للملكية الفكرية","المنظمة العالمية للملكية الفكرية"],"ci":0},{"ch":4,"q":"ما التقنية المستخدمة في ابتكار “جسيمات الفضة من أوراق القراص”؟","o":["تقنية الليزر","تقنية النانو","تقنية األشعة تحت الحمراء","الطباعة الحيوية"],"ci":1},{"ch":4,"q":"من ضمن الاستخدامات الطبية لجسيمات الفضة النانوية؟","o":["مسكن لأللم فقط","مضاد للبكتيريا","منشط عضلي","مضاد للحساسية"],"ci":1},{"ch":4,"q":"في أي معرض عالمي حققت الجامعة ميداليات عديدة البتكاراتها؟","o":["معرض جنيف الدولي","معرض فرانكفورت","معرض شنغهاي الدولي","معرض طوكيو"],"ci":0},{"ch":4,"q":"في دورة جنيف، 2024 كم عدد الميداليات التي حصلت عليها الجامعة؟","o":["3","5","10","15"],"ci":2},{"ch":4,"q":"ما عدد ميداليات الجامعة في معرض جنيف 2025؟","o":["5","7","8","12"],"ci":2},{"ch":4,"q":"أي معرض عالمي شاركت فيه الجامعة وكانت ضمن أفضل 3 مراكز؟","o":["آيتكس ITEX","برلين تك","سيئول للابتكار","معرض شيكاغو"],"ci":0},{"ch":4,"q":"ما هدف برنامج التمويل المؤسسي للبحث والابتكار؟ مبان جديدة","o":["دعم البحوث العلمية عالية الجودة","إنشاء ٍ","تطوير السكن الجامعي","تقليل أعداد البحوث"],"ci":0},{"ch":4,"q":"كم عدد األوراق العلمية المنشورة ضمن برنامج التمويل المؤسسي؟","o":["500","1354","2000","300"],"ci":1},{"ch":4,"q":"كم عدد األبحاث المنشورة على مستوى الجامعة لعام 2024؟","o":["7000","9000","12,599","25,000"],"ci":2},{"ch":4,"q":"ما نسبة مساهمة الجامعة في األبحاث المنشورة بالمملكة؟","o":["%23","%10","%5","%40"],"ci":0},{"ch":4,"q":"أي مجلة عالمية نشرت الجامعة فيها أبحاثا مميزة؟","o":["Nature","National Geographic","BBC Science","NewTech Biology"],"ci":0},{"ch":4,"q":"أي مجلة طبية عالمية نشرت أبحاثا من الجامعة؟","o":["The Lancet","Medical Weekly","Health Plus","Global Clinic"],"ci":0},{"ch":4,"q":"ما المركز البحثي الذي نشر 38 ورقة علمية في مجلات مرموقة؟","o":["مركز األمير نايف لألبحاث","مركز الملك سلمان","مركز الدراسات الاجتماعية","مركز اإلحصاء"],"ci":0},{"ch":4,"q":"ما أحد إنجازات مركز األمير نايف لألبحاث الصحية؟","o":["المشاركة في شبكات بحثية عالمية","إنشاء وحدات رياضية","إنشاء مسارح","إنشاء متاحف"],"ci":0},{"ch":4,"q":"ما عدد الخالصات العلمية المقدمة في المؤتمرات من قبل المركز؟","o":["10","20","45","5"],"ci":2},{"ch":4,"q":"أي مبادرة بحثية شاركت فيها الجامعة مع كندا؟","o":["برنامج األمير نايف للتعاون الدولي","برنامج العلوم المفتوحة","مبادرة الحوسبة الطبية","مبادرة الطاقة الحيوية"],"ci":0},{"ch":4,"q":"ما اسم مستشفى الجامعة الذي دخل موسوعة غينيس؟","o":["مستشفى طب األسنان الجامعي","مستشفى الملك خالد الجامعي","المدينة الطبية الجامعية","مستشفى عيون الرياض"],"ci":0},{"ch":4,"q":"ما سبب دخول مستشفى طب األسنان لموسوعة غينيس؟","o":["كونه أكبر مجمع لطب األسنان في العالم","ألنه أقدم مستشفى","ألنه يضم أكبر جهاز أشعة","ألنه مفتوح 24 ساعة"],"ci":0},{"ch":4,"q":"أي جائزة حصلت عليها الجامعة في 2024؟","o":["أفضل مستشفى سعودي– Asia Healthcare","أفضل جامعة أوروبية","أفضل مركز اجتماعي","أفضل مبنى بيئي"],"ci":0},{"ch":4,"q":"ما الجائزة التي حصلت عليها الجامعة في “المبادرات الخضراء”؟","o":["أفضل مبادرة للمستشفيات الخضراء","جائزة البيئة الذهبية","جائزة المدن المستدامة","جائزة الطاقة المتجددة"],"ci":0},{"ch":4,"q":"ما الجائزة العالمية التي حصل عليها منسوبو جامعة سعود في التمريض؟","o":["جائزة ديزي العالمية","جائزة نوبل للتمريض","جائزة الطيب العربي","جائزة اإلنجاز الطبي"],"ci":0},{"ch":4,"q":"ما السعة السريرية للمستشفى الجامعي حسب المذكرة؟","o":["1800 سرير","500 سرير","300 سرير","2000 سرير"],"ci":0},{"ch":4,"q":"أي اعتماد طبي عالمي حصلت عليه مستشفيات الجامعة؟","o":["JCI","FDA","ISO 9001","AHA"],"ci":0},{"ch":4,"q":"أي من برامج الجامعة يدعم الاستدامة المالية؟","o":["برنامج األوقاف","برنامج الخدمة المجتمعية","مركز اإلرشاد الطالبي","إدارة األمن"],"ci":0},{"ch":4,"q":"أي برج من أبراج األوقاف مخصص للفندق؟","o":["برج الفندق من فئة الخمس نجوم","برج العيادات","برج الهليل","برج المكتبة"],"ci":0},{"ch":4,"q":"من بين كراسي البحث،كرسيا متخصصا في:","o":["زراعة األسنان","الهندسة الوراثية","الإعلام","التربية"],"ci":0},{"ch":4,"q":"أي كرسي بحث يركز على “بناء العظام”؟","o":["كرسي بناء العظام","كرسي الجراحة","كرسي المناعة","كرسي التعليم"],"ci":0},{"ch":4,"q":"أي كلية تضم 4 كراسي بحثية حسب المذكرة؟","o":["كلية طب األسنان","كلية التربية","كلية القانون","كلية اآلداب"],"ci":0},{"ch":4,"q":"ما أحد أهداف كراسـي البحث؟","o":["تعزيز الريادة العلمية","تقديم خدمات النقل","تنظيم المقاصف","توفير السكن"],"ci":0},{"ch":4,"q":"برنامج التوأمة العلمية يهدف إلى:","o":["نشر األبحاث بالتعاون مع جامعات عالمية","تبادل الطالب فقط","تنظيم الرحالت","إقامة مهرجانات"],"ci":0},{"ch":4,"q":"أي مجلة عالمية مرموقة ُنشر فيها أبحاث من الجامعة؟","o":["Science","Sports Weekly","Social Media Times","Education Plus"],"ci":0},{"ch":4,"q":"أي جائزة مؤسسية حصلت عليها الجامعة في المحاسبة؟","o":["وسام الاستحقاق المحاسبي","جائزة اإلفصاح","جائزة المحاسب الذهبي","جائزة التطبيق المالي"],"ci":0},{"ch":4,"q":"ما شهادة الجودة العالمية التي حصلت عليها الجامعة في استمرارية الأعمال؟","o":["ISO 22301","ISO 14001","ISO 9001","ISO 45001"],"ci":0},{"ch":4,"q":"ما الهدف من األوقاف الجامعية؟","o":["دعم مالي وبحثي مستدام","دعم األنشطة الطالبية فقط","تقديم مكافات","بناء ساحات رياضية"],"ci":0},{"ch":4,"q":"أي وحدة بحثية تتعاون مع جامعة تورنتو؟","o":["مركز األمير نايف","مركز الزراعة","مركز البيئة","مركز التاريخ"],"ci":0},{"ch":4,"q":"أي ابتكار يدعم توليد الطاقة من األمواج؟","o":["أرجل متأرجحة للطاقة","مولدات بخارية","مراوح أرضية","بطاريات تقليدية"],"ci":0},{"ch":5,"q":"كم عدد الكليات التي تضمها جامعة الملك سعود وفق المذكرة؟","o":["24 كلية","15 كلية","30 كلية","20 كلية"],"ci":0},{"ch":5,"q":"ما الجهة المسؤولة عن اإلشراف األكاديمي األعلى في الجامعة؟","o":["مجلس الجامعة","عمادة شؤون الطالب","المركز الإعلامي","إدارة األمن"],"ci":0},{"ch":5,"q":"أي من الكليات التالية تعد من الكليات العلمية األساسية في الجامعة؟","o":["كلية العلوم","كلية الحقوق","كلية الفنون","كلية السياحة"],"ci":0},{"ch":5,"q":"أي عمادة ُتعد من العمادات المساندة القديمة التي ذكرتها المذكرة؟","o":["عمادة شؤون القبول والتسجيل","عمادة الإعلام","عمادة العقود","عمادة الرياضة"],"ci":0},{"ch":5,"q":"أي كلية جاءت نتيجة تطوير معهد اللغات والترجمة؟","o":["كلية اللغات وعلومها","كلية السياحة","كلية التربية","كلية الحاسب"],"ci":0},{"ch":5,"q":"من أبرز كليات القطاع الصحي في الجامعة:","o":["كلية الطب","كلية القانون","كلية اآلداب","كلية التربية"],"ci":0},{"ch":5,"q":"أي كلية ُتعد األولى في المملكة في العلوم الطبية التطبيقية؟","o":["كلية العلوم الطبية التطبيقية بجامعة الملك سعود","كلية الطب بجامعة أم القرى","كلية الفنون التطبيقية","كلية الحقوق"],"ci":0},{"ch":5,"q":"إحدى الوحدات التنظيمية التي تدعم التعليم العالي في الجامعة هي:","o":["عمادة الدراسات العليا","عمادة األمن","عمادة األداء الرياضي","مكتب المتحدث الرسمي"],"ci":0},{"ch":5,"q":"أي كلية تضم تخصصات الهندسة المدنية والكهربائية والميكانيكية؟","o":["كلية الهندسة","كلية العلوم","كلية اللغات","كلية المجتمع"],"ci":0},{"ch":5,"q":"ما الجهة التي تدير شؤون السكن والخدمات الطالبية؟","o":["عمادة شؤون الطالب","عمادة السنة األولى المشتركة","كلية التربية","مركز البحوث"],"ci":0},{"ch":5,"q":"أي الكليات التالية تتبع القطاع الصحي؟","o":["كلية التمريض","كلية التربية","كلية اآلداب","كلية الحقوق"],"ci":0},{"ch":5,"q":"ما الوحدة اإلدارية التي تشرف على النشر العلمي؟","o":["عمادة البحث العلمي","عمادة السنة المشتركة","مركز الإعلام","عمادة القبول"],"ci":0},{"ch":5,"q":"أي كلية تضم تخصصات اإلنتاج النباتي والاقتصاد الزراعي؟","o":["كلية علوم األغذية والزراعة","كلية الحقوق","كلية األداب","كلية السياحة"],"ci":0},{"ch":5,"q":"أي من التالي يعد مرفقا تابعا للهيكل الطبي بالجامعة؟","o":["مستشفى الملك خالد الجامعي","برج المعلم","السكن الطالبي","مركز اللغة"],"ci":0},{"ch":5,"q":"من الكليات التي تمت إعادة هيكلتها وأصبحت مرتبطة باللغات؟","o":["كلية اللغات وعلومها","كلية الإعلام","كلية القانون","كلية التربية"],"ci":0},{"ch":5,"q":"كلية الحقوق والعلوم السياسية تتبع أي مسار؟","o":["المسار اإلنساني والاجتماعي","المسار الصحي","المسار الهندسي","المسار الزراعي"],"ci":0},{"ch":5,"q":"عمادة الدراسات العليا كانت سابقا:","o":["كلية الدراسات العليا","مركز الدراسات المتقدمة","معهد الدراسات العليا","عمادة البحث"],"ci":0},{"ch":5,"q":"الهيكل التنظيمي للجامعة يشمل:","o":["الكليات والعمادات والمراكز","المدارس فقط","الشركات الخاصة","الجهات األمنية"],"ci":0},{"ch":5,"q":"أي من هذه الكليات يتبع القطاع اإلنساني؟","o":["كلية اآلداب","كلية الطب","كلية الصيدلة","كلية العلوم الطبية"],"ci":0},{"ch":5,"q":"ما العمادة التي ُتعنى بتقديم خدمات المكتبات؟","o":["عمادة شؤون المكتبات","عمادة القبول","عمادة األمن","عمادة السنة المشتركة"],"ci":0},{"ch":5,"q":"أي كلية ُتعد من الكليات المتخصصة الحديثة؟","o":["كلية الفنون","كلية التربية","كلية العلوم","كلية الطب"],"ci":0},{"ch":5,"q":"ما الكلية التي تشمل برامج السياحة واآلثار؟","o":["كلية السياحة واآلثار","كلية الإعلام","كلية القانون","كلية التربية"],"ci":0},{"ch":5,"q":"أي من التالي ُيعد جزءا من الهيكل التعليمي المساند؟","o":["عمادة السنة األولى المشتركة","عمادة الطب","مركز العيون","مركز التوثيق األمني"],"ci":0},{"ch":5,"q":"كلية علوم الرياضة والنشاط البدني تتبع أي مسار؟","o":["الصحي – التطبيقي","الهندسي","اإلنساني","التربوي"],"ci":0},{"ch":5,"q":"أي من التالي مركز بحثي ضمن الهيكل؟","o":["معهد الملك عبدهللا للبحوث","مركز التنمية الاجتماعية","مؤسسة الريادة","مركز التاريخ الوطني"],"ci":0},{"ch":5,"q":"أين يتم تدريب طالب كلية الطب بشكل رئيسي؟","o":["المدينة الطبية الجامعية","كلية التربية","كلية المجتمع","كلية الهندسة"],"ci":0},{"ch":5,"q":"ما الجهة التي تتولى إدارة المشاريع التطويرية من ناحية األكاديمية؟","o":["وكالة الجامعة للشؤون التعليمية","وكالة الجامعة للتطوير","عمادة شؤون الطالب","مركز األمن"],"ci":0},{"ch":5,"q":"عمادة خدمة المجتمع والتعليم المستمر أصبحت الحقا:","o":["كلية الدراسات التطبيقية وخدمة المجتمع","كلية المجتمع","كلية التربية","كلية الهندسة"],"ci":0},{"ch":5,"q":"أي كلية تضم تخصصات نظم المعلومات اإلدارية والاقتصاد والمحاسبة؟","o":["كلية إدارة الأعمال","كلية اآلداب","كلية الحاسب","كلية التربية"],"ci":0},{"ch":5,"q":"ما الوحدة المسؤولة عن التخطيط الاستراتيجي؟","o":["وكالة الجامعة للتخطيط والتطوير","عمادة القبول","إدارة السكن","وحدة العالقات العامة"],"ci":0},{"ch":5,"q":"كلية العمارة والتخطيط تأسست في أي عام تقريبا؟","o":["1404 هـ","1387 هـ","1410 هـ","1425 هـ"],"ci":0},{"ch":5,"q":"برنامج الطوارئ الطبية يتبع:","o":["كلية األمير سلطان للخدمات الطبية الطارئة","كلية الهندسة","كلية الإعلام","كلية القانون"],"ci":0},{"ch":5,"q":"ما الجهة التي تشرف على الخطط األكاديمية؟","o":["مجلس الجامعة","األندية الطالبية","إدارة األمن","السكن الجامعي"],"ci":0},{"ch":5,"q":"أي من التالي من مسؤوليات الهيكل اإلداري؟","o":["ضبط العمليات األكاديمية واإلدارية","رعاية األنشطة الرياضية فقط","تنظيم الحفالت","متابعة األندية"],"ci":0},{"ch":5,"q":"ما الجهة المسؤولة عن النشر العلمي والتوثيق؟","o":["عمادة البحث العلمي","عمادة القبول","مركز المعلومات","إدارة األمن"],"ci":0},{"ch":5,"q":"أي كلية تضم تخصصات الفنون والتصميم؟","o":["كلية الفنون","كلية الإعلام","كلية القانون","كلية الهندسة"],"ci":0},{"ch":5,"q":"من الكليات التي تمت إضافتها حديثا لتعزيز التنوع األكاديمي؟","o":["كلية الحقوق","كلية الفنون","كلية الطب","كلية الصيدلة"],"ci":1},{"ch":5,"q":"الهيكل األكاديمي للجامعة يشمل المسارات:","o":["الصحي – الهندسي – اإلنساني – التطبيقي","التجاري – األمني","الفني فقط","العسكري"],"ci":0},{"ch":6,"q":"كم عدد األوراق البحثية المنشورة من جامعة الملك سعود في عام 2024؟","o":["12,599","5,000","20,000","1,300"],"ci":0},{"ch":6,"q":"ما النسبة التي تمثلها أبحاث الجامعة من إجمالي األبحاث المنشورة في المملكة لعام 2024؟","o":["%23","%5","%50","%10"],"ci":0},{"ch":6,"q":"أي من المجالت التالية نشرت الجامعة فيها أبحاثا عالية التأثير؟","o":["Nature","Health Monthly","Daily Research","Tech Journal"],"ci":0},{"ch":6,"q":"من المجالت الطبية العالمية التي نشرت أبحاثا من الجامعة:","o":["The Lancet","Sports Medicine Plus","World Health Weekly","MedLife"],"ci":0},{"ch":6,"q":"ما الهدف من برنامج التمويل المؤسسي للبحث والابتكار؟","o":["دعم وتمويل األبحاث عالية الجودة","إنشاء مباني جديدة","دعم األنشطة الطالبية","استقطاب شركات لوجستية"],"ci":0},{"ch":6,"q":"كم عدد األوراق المنشورة ضمن برنامج التمويل المؤسسي؟","o":["1,354","500","3,000","120"],"ci":0},{"ch":6,"q":"من المراكز البحثية البارزة في الجامعة:","o":["مركز األمير نايف لألبحاث الصحية","مركز دراسات الطالب","مركز التاريخ واآلثار","مركز التدريب الرياضي"],"ci":0},{"ch":6,"q":"كم عدد الورقات العلمية التي نشرها مركز األمير نايف في مجلات مرموقة؟","o":["38","10","5","100"],"ci":0},{"ch":6,"q":"كم عدد الخالصات العلمية المقدمة من مركز األمير نايف في المؤتمرات العلمية؟","o":["45","20","12","5"],"ci":0},{"ch":6,"q":"برنامج األمير نايف للتعاون الدولي مرتبط بأي جهة عالمية؟","o":["مستشفى – St. Michael’s تورنتو","جامعة هارفارد","جامعة أكسفورد","جامعة طوكيو"],"ci":0},{"ch":6,"q":"ما الهدف من مركز األمير نايف لألبحاث؟","o":["تدريب كوادر وطنية في البحث الطبي","تقديم خدمات طلابية","تطوير األنشطة الرياضية","إنشاء معامل هندسية"],"ci":0},{"ch":6,"q":"أي برنامج بحثي يضم أكثر من 1,300 ورقة منشورة؟","o":["برنامج التمويل المؤسسي","برنامج األنشطة الطالبية","برنامج المجتمع","برامج السنة المشتركة"],"ci":0},{"ch":6,"q":"من المجالت العلمية التي نشرت أبحاثا من الجامعة:","o":["Science","University News","Health Focus","Media Journal"],"ci":0},{"ch":6,"q":"من بين الكراسي البحثية في كلية طب األسنان:","o":["كرسي زراعة األسنان","كرسي الإعلام الحديث","كرسي الدراسات الاجتماعية","كرسي اإلدارة"],"ci":0},{"ch":6,"q":"أي كرسي بحث متخصص في “المواد الحيوية السنية”؟","o":["كرسي المواد الحيوية","كرسي المناعة","كرسي الهندسة","كرسي التاريخ"],"ci":0},{"ch":6,"q":"ما الهدف من إنشاء كراسي البحث؟","o":["دعم التخصصات البحثية المتقدمة","زيادة األنشطة الترفيهية","نشر الإعلانات","دعم السكن الطالبي"],"ci":0},{"ch":6,"q":"كم عدد كراسي البحث الموجودة في كلية طب األسنان؟","o":["4","1","2","10"],"ci":0},{"ch":6,"q":"برنامج التوأمة العلمية العالمية يركز على:","o":["نشر أبحاث مشتركة مع جامعات عالمية","تبادل رياضي","تسويق منتجات","دراسة الشعر العربي"],"ci":0},{"ch":6,"q":"كم عدد األبحاث المنشورة ضمن برنامج التوأمة؟","o":["أكثر من 10 أبحاث","بحث واحد","50 بحث","100 بحث"],"ci":0},{"ch":6,"q":"أي مجلة عالمية متقدمة في التصنيف نشرت أبحاثا من البرنامج؟","o":["PNAS","Daily Biology","Med Today","TechBio"],"ci":0},{"ch":6,"q":"أحد مخرجات البرنامج هو:","o":["30 ورقة في مؤتمرات عالمية","100 مؤتمر فقط","إجراءات طبية","دورات تدريبية رياضية"],"ci":0},{"ch":6,"q":"ما هدف الجامعة من تعزيز النشر العلمي؟","o":["تحسين التصنيفات العالمية","زيادة الرسوم الدراسية","تقليل عدد األقسام","إلغاء الدراسات العليا"],"ci":0},{"ch":6,"q":"أي فصل في KSU101 يذكر زيادة عدد األبحاث بشكل مستمر؟","o":["البحث العلمي","الخدمات","الشراكات","األنشطة"],"ci":0},{"ch":6,"q":"من إنجازات الجامعة في العلوم الطبية:","o":["نشر أبحاث متميزة في New England Journal of Medicine","تشغيل ملاعب جديدة","تحديث النقل الجامعي","إقامة معارض فنية"],"ci":0},{"ch":6,"q":"أي مبادرة بحثية ساهمت في تطوير مختبرات األوعية الدموية؟","o":["التعاون الدولي مع كندا","برنامج الرياضة","مجلس الطالب","اإلرشاد األكاديمي"],"ci":0},{"ch":6,"q":"من أهداف المركز الطبي الجامعي البحثية:","o":["تقديم أبحاث علاجية متقدمة","تطوير األنشطة الرياضية","دراسة التراث","تطوير التعليم فقط"],"ci":0},{"ch":6,"q":"ما ميزة برنامج كراسي البحث بالنسبة للجامعة؟","o":["الاستقطاب العلمي العالمي","تخفيض عدد البرامج","إلغاء مشاريع البحث","إغلاق المختبرات"],"ci":0},{"ch":6,"q":"أي تخصص بحثي يشمل بحوث البتروكيماويات والطاقة؟","o":["الهندسة","الإعلام","القانون","التاريخ"],"ci":0},{"ch":6,"q":"أحد مؤشرات تميز الجامعة بحثيا هو:","o":["ارتفاع معامل الاستشهاد","زيادة عدد السكنات","كثرة األنشطة الاجتماعية","توسع النادي الرياضي"],"ci":0},{"ch":6,"q":"أين ُت َّ قدم الخالصات العلمية لمشاريع الجامعة؟","o":["مؤتمرات عالمية ومحلية","النوادي","السكن الجامعي","قاعات النشاط"],"ci":0},{"ch":6,"q":"من ملامح الابتكار:","o":["ابتكارات الطاقة المتجددة (األرجل المتأرجحة)","ابتكار وسائل نقل جديدة","ابتكار مسارح","ابتكار ألعاب"],"ci":0},{"ch":6,"q":"مشروع توليد الطاقة باألرجل المتأرجحة يهدف إلى:","o":["إنتاج طاقة نظيفة ومتجددة","إنتاج مياه","الترفيه","استخدام رياضي"],"ci":0},{"ch":6,"q":"من مزايا الابتكارات البحثية في الجامعة:","o":["تحويلها لمنتجات قابلة للتسويق","الاستخدام الداخلي فقط","منع تسويقها","اقتصارها على التدريس"],"ci":0},{"ch":6,"q":"أي جهة تدعم اختبار الجدوى الصناعية للابتكار؟","o":["مركز تطوير التقنية والنمذجة","مركز الإعلام","مركز الرياضة","إدارة األمن"],"ci":0},{"ch":6,"q":"ما هدف الشركات الناشئة التي ُتبنى على البحوث؟","o":["نقل التقنية للسوق","زيادة الكتب","تقليل األنشطة","دعم السكن"],"ci":0},{"ch":6,"q":"من مجالات البحث المتقدمة في الجامعة:","o":["النانو","الرسم","اللغة","الشعر"],"ci":0},{"ch":6,"q":"ما المركز الذي يقود أبحاث األورام والقلب؟","o":["المدينة الطبية الجامعية – تصنيف Scimago","كلية العلوم","كلية التربية","مركز التاريخ"],"ci":0},{"ch":6,"q":"أي مؤشر عالمي يعكس تقدم الجامعة بحثيا؟","o":["التصنيف المتقدم في شنغهاي والتايمز","عدد األنشطة الرياضية","عدد السكنات","زيادة الفعاليات"],"ci":0},{"ch":7,"q":"ما الهدف الرئيس من الشراكات الدولية التي تعقدها الجامعة؟","o":["تعزيز البحث العلمي المشترك","زيادة األنشطة الرياضية","تقليل عدد البرامج األكاديمية","تنظيم السكن الطالبي"],"ci":0},{"ch":7,"q":"إحدى الجهات الدولية التي ترتبط بها الجامعة في الشراكات البحثية هي:","o":["المؤسسات األكاديمية العالمية","المدارس الثانوية","مراكز التدريب العسكري","مكاتب السياحة"],"ci":0},{"ch":7,"q":"ما نوع الاتفاقيات التي تهدف إلى تبادل الخبرات واألبحاث؟","o":["مذكرات التفاهم","عقود اإلنشاء","عقود المقاصف","عقود النقل"],"ci":0},{"ch":7,"q":"من أهداف الاتفاقيات الاستراتيجية:","o":["دعم الابتكار ونقل المعرفة","تخفيض عدد الكليات","إلغاء البرامج األكاديمية","تقليل األبحاث"],"ci":0},{"ch":7,"q":"أي نوع من الشراكات يركز على تطوير األبحاث المشتركة؟","o":["الشراكات البحثية الدولية","شراكات المقاصف","شراكات السكن","شراكات النقل"],"ci":0},{"ch":7,"q":"ما الفائدة األساسية من الشراكات في التصنيفات العالمية؟","o":["تحسين السمعة البحثية","تنظيم األنشطة الرياضية","دعم الخدمات الطالبية فقط","تخفيض الرسوم"],"ci":0},{"ch":7,"q":"تشمل الاتفاقيات الدولية عادة:","o":["تدريب وتطوير وتبادل الخبرات","تشغيل السكن","إنشاء ملاعب","خدمات التغذية"],"ci":0},{"ch":7,"q":"من الجهات التي ُتبرم الجامعة معها اتفاقيات:","o":["مراكز أبحاث عالمية","المقاصف المدرسية","األندية الرياضية","مكاتب السفر"],"ci":0},{"ch":7,"q":"العضوية في المنظمات الدولية تساعد الجامعة على:","o":["رفع مستوى التعاون األكاديمي العالمي","إدارة المرور","مراقبة السكن","الخدمات اللوجستية"],"ci":0},{"ch":7,"q":"أحد أنواع التعاون الدولي المذكور في المذكرة:","o":["التعاون البحثي","التعاون الرياضي فقط","التعاون المتحفي","التعاون في المقاصف"],"ci":0},{"ch":7,"q":"الهدف من الانضمام للمنظمات الدولية:","o":["تعزيز الحضور العلمي للجامعة","زيادة األنشطة الاجتماعية","تخفيض القبول","إنشاء وحدات سكنية"],"ci":0},{"ch":7,"q":"أي من التالي مثال على شراكة بحثية؟","o":["مراكز أبحاث عالمية","شركات األغذية","شركات النقل","النوادي الرياضية"],"ci":0},{"ch":7,"q":"تسهم الشراكات الدولية في:","o":["دعم التعاون العلمي وتطوير البرامج","تخفيض عدد البرامج","إيقاف الابتكار","تقليل أعضاء هيئة التدريس"],"ci":0},{"ch":7,"q":"أحد أشكال الاتفاقيات التي تبرمها الجامعة مع جهات خارجية هو:","o":["بروتوكولات التعاون","عقود التغذية","عقود األمن","عقود السكن"],"ci":0},{"ch":7,"q":"تهدف مذكرات التفاهم إلى:","o":["تبادل الخبرات بين الجامعة والمؤسسات العالمية","إنشاء ملاعب جديدة","إدارة المقاصف","رفع الرسوم"],"ci":0},{"ch":7,"q":"من ثمار الشراكات رفع:","o":["جودة البحث العلمي","أسعار الكتب","رسوم التذاكر","عدد المقاصف"],"ci":0},{"ch":7,"q":"الشراكات الدولية تقود إلى:","o":["نقل المعرفة والتقنيات الحديثة","تقليل عدد الكليات","إلغاء المختبرات","خفض الميزانية األكاديمية"],"ci":0},{"ch":7,"q":"أحد أهداف الاتفاقيات مع الجامعات العالمية هو:","o":["التدريب والتطوير","إدارة المعامل","تشغيل السكن","اإلشراف اإلداري"],"ci":0},{"ch":7,"q":"تساعد الاتفاقيات على تقوية:","o":["السمعة األكاديمية","السكن الجامعي","المقاصف","الشؤون الرياضية"],"ci":0},{"ch":7,"q":"أي من التالي يعد من أنواع التعاون الدولي؟","o":["التعاون البحثي","التعاون السكني","التعاون الرياضي","التعاون المالي فقط"],"ci":0},{"ch":7,"q":"من فوائد الشراكات دعم:","o":["المشاريع العلمية المشتركة","رسوم النشاط","المقاصف","مواقف السيارات"],"ci":0},{"ch":7,"q":"ما أحد مكونات الشراكات التي تذكرها المذكرة؟","o":["الاتفاقيات مع جامعات ومراكز عالمية","اتفاقيات األندية الرياضية","اتفاقيات المطاعم","اتفاقيات النقل"],"ci":0},{"ch":7,"q":"الجامعة عضو في عدة منظمات… الهدف منها:","o":["تعزيز حضورها العلمي عالميًا","زيادة األنشطة الطالبية","دعم النقل","دعم المتاجر الجامعية"],"ci":0},{"ch":7,"q":"الاتفاقيات الدولية تسهم في تطوير:","o":["البرامج األكاديمية المشتركة","المقاصف","األنشطة الاجتماعية","األمن"],"ci":0},{"ch":7,"q":"أحد أهداف الشراكات مع القطاع الصناعي:","o":["دعم نقل التقنية","إنشاء ملاعب","توفير النقل","تدريب السائقين"],"ci":0},{"ch":7,"q":"من مخرجات الشراكات العالمية:","o":["أبحاث مشتركة ومنشورة","تخفيض عدد المختبرات","تقليل البرامج الدراسية","إيقاف التبادل الطالبي"],"ci":0},{"ch":7,"q":"أحد مجالات الشراكات الاستراتيجية:","o":["تبادل أعضاء هيئة التدريس","تبادل األندية","تبادل السكن","تبادل الدعم اللوجستي فقط"],"ci":0},{"ch":7,"q":"تسهم الشراكات الدولية في تحسين تصنيف الجامعة عبر:","o":["زيادة النشر المشترك","خفض قبول الطالب","إغلاق المراكز","تقليل البحث العلمي"],"ci":0},{"ch":7,"q":"أي من التالي ُيعد شريكا محتملًا للجامعة؟","o":["مؤسسات أكاديمية عالمية","المطاعم","شركات السفر","النوادي الرياضية"],"ci":0},{"ch":7,"q":"الاتفاقيات تتيح للجامعة:","o":["تبادل الطالب والباحثين","إلغاء المختبرات","إلغاء التعليم اإللكتروني","وقف الابتكار"],"ci":0},{"ch":7,"q":"العضويات الدولية تساهم في:","o":["تعزيز مكانة الجامعة عالميًا","تشغيل المقصف","بناء السكن","زيادة األنشطة"],"ci":0},{"ch":7,"q":"أحد األهداف الرئيسة للشراكات:","o":["تطوير البحوث التطبيقية","زيادة المقاصف","تنظيم النقل","توفير مدرجات"],"ci":0},{"ch":7,"q":"من أنواع التعاون بين الجامعة والجهات العالمية:","o":["تبادل البحوث والخبرات","تبادل السكن","تبادل األمن","تبادل المقاصف"],"ci":0},{"ch":7,"q":"تهدف مذكرات التفاهم إلى:","o":["بدء تعاون رسمي في مجالات العلوم والبحوث","تشغيل األنشطة","إدارة األمن","تحسين المرور"],"ci":0},{"ch":7,"q":"أحد عناصر تطوير الشراكات:","o":["توقيع الاتفاقيات المتقدمة","زيادة تذاكر الفعاليات","إزالة المختبرات","تقليل أعضاء هيئة التدريس"],"ci":0},{"ch":7,"q":"من مزايا التعاون الدولي:","o":["مشاركة الجامعة في مشروعات بحثية مشتركة","بناء فصول إضافية","تقليل الاختبارات","إلغاء الدراسات العليا"],"ci":0},{"ch":7,"q":"الشراكات العالمية تعزز:","o":["حصول الجامعة على مكانة أكاديمية أعلى","زيادة الرسوم","إلغاء األندية","تقليل ساعات الدراسة"],"ci":0},{"ch":7,"q":"الاتفاقيات الدولية تعزز قدرة الجامعة على:","o":["الابتكار وتطوير المعرفة","تخفيض عدد المختبرات","إلغاء المرافق","تقليل أعضاء هيئة التدريس"],"ci":0},{"ch":8,"q":"ما الهدف األساسي من األندية الطالبية في الجامعة؟","o":["تنمية المهارات وصقل المواهب","تقديم الخدمات الطبية","اإلشراف على الاختبارات","تسجيل الطالب"],"ci":0},{"ch":8,"q":"أي من التالي ُيعد من عناصر الحياة الجامعية في الجامعة؟","o":["البيئة الجامعية المتكاملة","المصانع الوطنية","الشركات الخاصة","األسواق الخارجية"],"ci":0},{"ch":8,"q":"ما الجهة المسؤولة عن تقديم الخدمات الطالبية األساسية؟","o":["عمادة شؤون الطالب","مركز اللغات","كلية القانون","مركز األمن"],"ci":0},{"ch":8,"q":"المدينة الجامعية للطالبات توفر:","o":["مرافق تعليمية وخدمية متكاملة","خدمات السفر والسياحة","معامل هندسية فقط","أماكن رياضية فقط"],"ci":0},{"ch":8,"q":"متى تم افتتاح المدينة الجامعية للطالبات؟","o":["1435–1434 هـ","1420 هـ","1377 هـ","1440 هـ"],"ci":0},{"ch":8,"q":"من أهداف الخدمات الطالبية:","o":["توفير بيئة تعليمية مهيأة","تقديم التعليم المدرسي","دعم النقل الخارجي","اإلشراف على األنشطة التجارية"],"ci":0},{"ch":8,"q":"مستشفى الملك خالد الجامعي يقدم خدمات:","o":["طبية متقدمة وتعليمية","رياضية","قانونية","تجارية"],"ci":0},{"ch":8,"q":"من ضمن المرافق في الحياة الجامعية:","o":["المكتبات الجامعية","المتاحف الخليجية","المناجم","المصانع"],"ci":0},{"ch":8,"q":"المدينة الطبية الجامعية تشمل:","o":["تخصصات طبية متعددة وتجهيزات متقدمة","خدمات رياضية فقط","مسارح","مطاعم تجارية فقط"],"ci":0},{"ch":8,"q":"السعة السريرية للمستشفيات الجامعية تبلغ:","o":["1800 سرير","500 سرير","100 سرير","2500 سرير"],"ci":0},{"ch":8,"q":"تضم الجامعة خدمات نقل مخصصة لـ:","o":["الطالب والطالبات","الموظفين فقط","أعضاء هيئة التدريس فقط","الزوار فقط"],"ci":0},{"ch":8,"q":"من مرافق األنشطة في البيئة الجامعية:","o":["المالعب الرياضية","محطات قطار","مصانع إنتاج","مختبرات نووية"],"ci":0},{"ch":8,"q":"هدف األندية الطالبية هو:","o":["تعزيز الانتماء وتنمية المهارات","تقديم العالج الطبي","تقييم أعضاء هيئة التدريس","إصدار الشهادات"],"ci":0},{"ch":8,"q":"الخدمات التي توفرها الجامعة للطالبات تشمل:","o":["نقل – إسكان – مرافق تعليمية","دعم بحوث خارجية فقط","خدمات تجارية","دعم الصادرات"],"ci":0},{"ch":8,"q":"المكتبات الجامعية تعتبر جزءا من:","o":["خدمات الدعم األكاديمي","الخدمات التجارية","خدمات األمن","السكن الجامعي"],"ci":0},{"ch":8,"q":"من أبرز خدمات الجامعة:","o":["تقديم بيئة تعليمية محفزة","بيع األجهزة اإللكترونية","توفير وظائف خارج الجامعة","تقديم برامج مدرسية"],"ci":0},{"ch":8,"q":"مرافق الطالبات تشمل:","o":["معامل،قاعات تعليمية،خدمات طبية","حدائق عامة فقط","مكاتب تجارية","مصانع غذائية"],"ci":0},{"ch":8,"q":"ما دور عمادة شؤون الطالب؟","o":["تقديم الرعاية والخدمات واألنشطة الطالبية","وضع الخطط المالية","اإلشراف على العقود","تقييم أعضاء هيئة التدريس"],"ci":0},{"ch":8,"q":"الجامعة توفر للطالب بيئة تشمل:","o":["تعليم،بحث،أنشطة وخدمات","تجارة إلكترونية فقط","تدريب عسكري","رحلات بحرية"],"ci":0},{"ch":8,"q":"أحد العناصر الرئيسية للحياة الجامعية:","o":["األندية الطالبية","الشركات الخاصة","المطارات","المتاحف الخارجية"],"ci":0},{"ch":8,"q":"تشمل الخدمات الصحية:","o":["المستشفيات الجامعية والعيادات","خدمات السفر","خدمات الترجمة","خدمات التجارة"],"ci":0},{"ch":8,"q":"من وسائل الدعم األكاديمي:","o":["اإلرشاد األكاديمي","األمن","المقصف","النشاط الرياضي"],"ci":0},{"ch":8,"q":"توفر الجامعة بيئة…","o":["تعليمية وبحثية وخدمية","تجارية بحتة","عسكرية","سياسية"],"ci":0},{"ch":8,"q":"الخدمات المقدمة في المدينة الجامعية للطالبات تشمل:","o":["خدمات صحية،نقل،معامل،مرافق تعليمية","زراعة نخيل","مقاصف خارجية","أسواق تجارية"],"ci":0},{"ch":8,"q":"ما أبرز غرض من الحياة الجامعية؟","o":["تهيئة بيئة متكاملة للدراسة والابتكار","زيادة األنشطة الرياضية فقط","تخفيض الخدمات","تقليل األنشطة الثقافية"],"ci":0},{"ch":8,"q":"أي مما يلي يعد من الخدمات األكاديمية؟","o":["المكتبات","المقاصف","السكن","األمن"],"ci":0},{"ch":8,"q":"المالعب الرياضية توفر:","o":["أنشطة لياقية ورياضية","خدمات طبية","مختبرات","دراسات عليا"],"ci":0},{"ch":8,"q":"من مرافق الخدمات الصحية:","o":["وحدات العناية المركزة","المقاصف","إدارات المرور","المكتبات"],"ci":0},{"ch":8,"q":"الخدمات الطالبية تسهم في:","o":["تحسين تجربة الطالب الجامعية","دعم األسواق","بناء المصانع","دعم المشاريع الخارجية"],"ci":0},{"ch":8,"q":"المدينة الجامعية للطالبات تمتاز بـ:","o":["تكامل المرافق والخدمات","القاعات الرياضية فقط","المسارح فقط","الخدمات التجارية"],"ci":0},{"ch":8,"q":"توفر الجامعة خدمات نقل للطالبات بهدف:","o":["تسهيل الوصول للكليات والمرافق","دعم الشركات","نقل البضائع","السياحة"],"ci":0},{"ch":8,"q":"من األندية الطالبية:","o":["الثقافي،الفني،التطوعي","الصناعي","التجاري","العسكري"],"ci":0},{"ch":8,"q":"توفر مكتبات الجامعة:","o":["مصادر معلومات،قواعد بيانات،كتب","خدمات الترفيه","أجهزة كهربائية","منتجات غذائية"],"ci":0},{"ch":8,"q":"ما الدور الذي تلعبه الخدمات الطبية في الجامعة؟","o":["دعم العملية التعليمية","تقديم الترفيه","توفير النشاط الرياضي","إصدار الشهادات"],"ci":0},{"ch":8,"q":"ما الهدف من األنشطة الطالبية؟","o":["تطوير الشخصية وتنمية المواهب","تخفيض ساعات الدراسة","استبدال المحاضرات","إنهاء الواجبات"],"ci":0},{"ch":8,"q":"الجامعة توفر خدمات…","o":["تعليمية – بحثية – خدمية","تجارية","سياحية","عسكرية"],"ci":0},{"ch":8,"q":"تشمل الخدمات األكاديمية الداعمة:","o":["اإلرشاد األكاديمي والمكتبات","حافلات السفر","شركات النقل","الخدمات التجارية"],"ci":0},{"ch":8,"q":"تسهم الحياة الجامعية في:","o":["تعزيز الانتماء والنجاح األكاديمي","تقليل األنشطة","تقليل الخدمات","إلغاء المرافق"],"ci":0}];
+
+const CHAPTERS = {
+  1: "الباب الأول: النظام الأساس للجامعة",
+  2: "الباب الثاني: تاريخ الجامعة",
+  3: "الباب الثالث: التصنيفات الدولية والمحلية",
+  4: "الباب الرابع: المنجزات",
+  5: "الباب الخامس: الهيكل الأكاديمي والتنظيمي",
+  6: "الباب السادس: البحث العلمي والابتكار",
+  7: "الباب السابع: الشراكات والاتفاقيات",
+  8: "الباب الثامن: الحياة الجامعية والخدمات"
+};
+const CHAPTERS_SHORT = {
+  1:"النظام الأساس",2:"تاريخ الجامعة",3:"التصنيفات",4:"المنجزات",
+  5:"الهيكل الأكاديمي",6:"البحث العلمي",7:"الشراكات",8:"الحياة الجامعية"
+};
+const LETTERS = ['أ','ب','ج','د'];
+
+let state = {
+  mode: 'flash',
+  chapter: 'all',
+  flashList: [],
+  flashIdx: 0,
+  flipped: false,
+  known: new Set(),
+  quizList: [],
+  quizIdx: 0,
+  quizScore: 0,
+  quizAnswered: 0,
+  quizLocked: false
+};
+
+function idOf(item){ return item.ch + '::' + item.q; }
+
+function shuffleArr(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function buildChapterOptions(){
+  const sel = document.getElementById('chapterSelect');
+  sel.innerHTML = '';
+  const optAll = document.createElement('option');
+  optAll.value = 'all'; optAll.textContent = `كل الأبواب (${QUESTIONS.length} سؤال)`;
+  sel.appendChild(optAll);
+  for(let c=1;c<=8;c++){
+    const count = QUESTIONS.filter(q=>q.ch===c).length;
+    const o = document.createElement('option');
+    o.value = c;
+    o.textContent = `${CHAPTERS[c]} (${count})`;
+    sel.appendChild(o);
+  }
+}
+
+function currentPool(){
+  if(state.chapter==='all') return QUESTIONS;
+  return QUESTIONS.filter(q=>q.ch===Number(state.chapter));
+}
+
+/* ===== Flashcard ===== */
+function initFlash(reshuffle){
+  const pool = currentPool();
+  state.flashList = reshuffle ? shuffleArr(pool) : pool.slice();
+  state.flashIdx = 0;
+  state.flipped = false;
+  renderFlash();
+}
+
+function renderFlash(){
+  const list = state.flashList;
+  if(list.length===0){
+    document.getElementById('qFront').textContent = 'لا توجد أسئلة في هذا الباب.';
+    document.getElementById('optsFront').innerHTML='';
+    document.getElementById('qBack').textContent = '';
+    document.getElementById('optsBack').innerHTML='';
+    document.getElementById('cardCounter').textContent = '0 / 0';
+    updateProgress(0,0);
+    return;
+  }
+  const item = list[state.flashIdx];
+  document.getElementById('qFront').textContent = item.q;
+  document.getElementById('qBack').textContent = item.q;
+  document.getElementById('chapChipFront').textContent = CHAPTERS_SHORT[item.ch];
+  document.getElementById('chapChipBack').textContent = CHAPTERS_SHORT[item.ch];
+
+  const frontBox = document.getElementById('optsFront');
+  frontBox.innerHTML='';
+  item.o.forEach((opt,i)=>{
+    const div = document.createElement('div');
+    div.className='mini-opt';
+    div.innerHTML = `<span class="ol">${LETTERS[i]}</span><span>${opt}</span>`;
+    frontBox.appendChild(div);
+  });
+
+  const backBox = document.getElementById('optsBack');
+  backBox.innerHTML='';
+  item.o.forEach((opt,i)=>{
+    const div = document.createElement('div');
+    div.className='mini-opt' + (i===item.ci ? ' correct' : '');
+    div.innerHTML = `<span class="ol">${LETTERS[i]}</span><span>${opt}${i===item.ci ? ' ✓' : ''}</span>`;
+    backBox.appendChild(div);
+  });
+
+  document.getElementById('cardCounter').textContent = `${state.flashIdx+1} / ${list.length}`;
+  document.getElementById('card').classList.remove('flipped');
+  state.flipped = false;
+  updateProgress(state.known.size, QUESTIONS.length);
+}
+
+function flipCard(){
+  state.flipped = !state.flipped;
+  document.getElementById('card').classList.toggle('flipped', state.flipped);
+}
+function nextCard(){
+  if(state.flashList.length===0) return;
+  state.flashIdx = (state.flashIdx+1) % state.flashList.length;
+  renderFlash();
+}
+function prevCard(){
+  if(state.flashList.length===0) return;
+  state.flashIdx = (state.flashIdx-1+state.flashList.length) % state.flashList.length;
+  renderFlash();
+}
+function markCard(known){
+  const list = state.flashList;
+  if(list.length===0) return;
+  const item = list[state.flashIdx];
+  const id = idOf(item);
+  if(known) state.known.add(id); else state.known.delete(id);
+  document.getElementById('statKnown').textContent = state.known.size;
+  updateProgress(state.known.size, QUESTIONS.length);
+  nextCard();
+}
+
+/* ===== Quiz (uses the real provided options, shuffled each time) ===== */
+function initQuiz(reshuffle){
+  const pool = currentPool();
+  state.quizList = reshuffle ? shuffleArr(pool) : pool.slice();
+  state.quizIdx = 0;
+  state.quizScore = 0;
+  state.quizAnswered = 0;
+  renderQuizQuestion();
+}
+
+function renderQuizQuestion(){
+  const list = state.quizList;
+  document.getElementById('nextQBtn').style.display='none';
+  document.getElementById('quizFeedback').classList.remove('show');
+  state.quizLocked = false;
+
+  if(list.length===0){
+    document.getElementById('quizQ').textContent = 'لا توجد أسئلة في هذا الباب.';
+    document.getElementById('quizOptions').innerHTML='';
+    return;
+  }
+  if(state.quizIdx >= list.length){
+    renderQuizEnd();
+    return;
+  }
+  const item = list[state.quizIdx];
+  document.getElementById('quizChapChip').textContent = CHAPTERS_SHORT[item.ch];
+  document.getElementById('quizQ').textContent = item.q;
+  document.getElementById('scorePill').textContent = `النتيجة: ${state.quizScore} / ${state.quizAnswered}  ·  ${state.quizIdx+1} من ${list.length}`;
+
+  // shuffle option order but remember correct text
+  const correctText = item.o[item.ci];
+  const order = shuffleArr(item.o.map((_,i)=>i));
+  const box = document.getElementById('quizOptions');
+  box.innerHTML='';
+  order.forEach((origIdx, i)=>{
+    const opt = item.o[origIdx];
+    const btn = document.createElement('button');
+    btn.className='option';
+    btn.innerHTML = `<span class="oletter">${LETTERS[i]}</span><span>${opt}</span>`;
+    btn.onclick = ()=> selectQuizOption(btn, opt, correctText);
+    box.appendChild(btn);
+  });
+  updateProgress(state.quizIdx, list.length);
+}
+
+function selectQuizOption(btn, opt, correctText){
+  if(state.quizLocked) return;
+  state.quizLocked = true;
+  state.quizAnswered++;
+  const correct = opt === correctText;
+  if(correct) state.quizScore++;
+
+  document.querySelectorAll('#quizOptions .option').forEach(b=>{
+    b.classList.add('locked');
+    const txt = b.querySelector('span:last-child').textContent;
+    if(txt === correctText) b.classList.add('correct');
+  });
+  if(!correct) btn.classList.add('wrong');
+
+  const fb = document.getElementById('quizFeedback');
+  fb.classList.add('show');
+  fb.innerHTML = (correct ? '✅ <b>إجابة صحيحة!</b>' : '❌ <b>إجابة غير دقيقة.</b> الصواب: <b>'+correctText+'</b>');
+  document.getElementById('scorePill').textContent = `النتيجة: ${state.quizScore} / ${state.quizAnswered}  ·  ${state.quizIdx+1} من ${state.quizList.length}`;
+  document.getElementById('statScore').textContent = Math.round(100*state.quizScore/state.quizAnswered) + '%';
+  document.getElementById('nextQBtn').style.display='inline-flex';
+  document.getElementById('nextQBtn').textContent = (state.quizIdx+1 < state.quizList.length) ? 'السؤال التالي ←' : 'عرض النتيجة النهائية ←';
+}
+
+function nextQuizQuestion(){
+  state.quizIdx++;
+  renderQuizQuestion();
+}
+
+function renderQuizEnd(){
+  const pct = state.quizAnswered ? Math.round(100*state.quizScore/state.quizAnswered) : 0;
+  document.getElementById('quizCard').innerHTML = `
+    <div class="end-screen">
+      <div style="font-size:40px;">🎓</div>
+      <div>انتهى الاختبار</div>
+      <div class="big-score">${state.quizScore}<span> / ${state.quizAnswered}</span></div>
+      <div style="font-weight:700;color:var(--navy-800);margin-bottom:18px;">نسبة الإجابات الصحيحة: ${pct}%</div>
+      <button class="btn primary" onclick="restartQuiz()">إعادة الاختبار من جديد</button>
+    </div>`;
+}
+
+function restartQuiz(){
+  document.getElementById('quizStage').innerHTML = document.getElementById('quizStageTemplate').innerHTML;
+  initQuiz(true);
+}
+
+/* ===== Shared UI ===== */
+function updateProgress(done, total){
+  const pct = total ? Math.round(100*done/total) : 0;
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = `${done} / ${total}`;
+}
+
+function setMode(m){
+  state.mode = m;
+  document.getElementById('modeFlash').classList.toggle('active', m==='flash');
+  document.getElementById('modeQuiz').classList.toggle('active', m==='quiz');
+  document.getElementById('flashStage').style.display = m==='flash' ? '' : 'none';
+  document.getElementById('quizStage').style.display = m==='quiz' ? '' : 'none';
+  if(m==='flash'){ initFlash(false); document.getElementById('qCountPill').textContent = 'بطاقات تعليمية'; }
+  else { initQuiz(false); document.getElementById('qCountPill').textContent = 'اختبار تفاعلي'; }
+}
+
+function onChapterChange(){
+  state.chapter = document.getElementById('chapterSelect').value;
+  if(state.mode==='flash') initFlash(false); else initQuiz(false);
+}
+
+function shuffleCurrent(){
+  if(state.mode==='flash') initFlash(true); else initQuiz(true);
+}
+
+document.addEventListener('keydown', (e)=>{
+  if(state.mode!=='flash') return;
+  if(e.key==='ArrowRight') prevCard();
+  else if(e.key==='ArrowLeft') nextCard();
+  else if(e.key===' '){ e.preventDefault(); flipCard(); }
+});
+
+document.getElementById('statTotal').textContent = QUESTIONS.length;
+buildChapterOptions();
+initFlash(true);
+</script>
+<template id="quizStageTemplate"><div class="quiz-card" id="quizCard">
+  <div class="quiz-top">
+    <span class="chip" id="quizChapChip" style="margin:0;">الباب</span>
+    <span class="score-pill" id="scorePill">النتيجة: 0 / 0</span>
+  </div>
+  <div class="quiz-q" id="quizQ">...</div>
+  <div class="options" id="quizOptions"></div>
+  <div class="quiz-feedback" id="quizFeedback"></div>
+  <div class="quiz-actions">
+    <button class="btn primary" id="nextQBtn" onclick="nextQuizQuestion()" style="display:none;">السؤال التالي ←</button>
+  </div>
+</div></template>
+</body>
+</html>
